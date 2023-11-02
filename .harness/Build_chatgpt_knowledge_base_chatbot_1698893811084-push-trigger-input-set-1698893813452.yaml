@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_chatgpt_knowledge_base_chatbot_1698893811084-push-trigger-input-set
+  identifier: Build_chatgpt_knowledge_base_chatbot_1698893811084pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: dualwire
+  pipeline:
+    identifier: Build_chatgpt_knowledge_base_chatbot_1698893811084
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
