@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_chatgpt_knowledge_base_chatbot_1698893811084-pr-trigger-input-set
+  identifier: Build_chatgpt_knowledge_base_chatbot_1698893811084prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: dualwire
+  pipeline:
+    identifier: Build_chatgpt_knowledge_base_chatbot_1698893811084
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
