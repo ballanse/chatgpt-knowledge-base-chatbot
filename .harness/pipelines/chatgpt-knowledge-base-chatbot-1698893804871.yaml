@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_chatgpt_knowledge_base_chatbot_1698893811084
+  name: Build chatgpt-knowledge-base-chatbot
+  orgIdentifier: default
+  projectIdentifier: dualwire
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1698893797984
+        repoName: chatgpt-knowledge-base-chatbot
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: npminstall
+                  name: npm_install
+                  spec:
+                    command: npm install
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
